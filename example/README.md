@@ -28,3 +28,9 @@ $ flutter run
 * If you use MapTiler Cloud as your tiles endpoint you can pass in your [MapTiler key](https://cloud.maptiler.com/account/keys) via the `trufiCfg.map.mapTilerKey` setting.
 
 * For Android: [Create a key store](https://flutter.dev/docs/deployment/android#signing-the-app) or use an existing key, fill the `android/key.properties` with path and password.
+
+This Branch was create to Abidjan project
+
+There was some issues with packages. I downgrade the flutter instalation running this command in console : 
+
+'flutter version 1.17.4'
