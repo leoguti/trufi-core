@@ -82,9 +82,13 @@ void main() async {
   trufiCfg.map.onlineMaxZoom = 19.0;
   trufiCfg.map.onlineZoom = 13.0;
   trufiCfg.map.chooseLocationZoom = 16.0;
-  trufiCfg.map.center = LatLng(-17.39000, -66.15400);
+/*   trufiCfg.map.center = LatLng(-4.39000, -66.15400);
   trufiCfg.map.southWest = LatLng(-17.79300, -66.75000);
   trufiCfg.map.northEast = LatLng(-16.90400, -65.67400);
+ */
+  trufiCfg.map.center = LatLng(5.4286, -4.0059);
+  trufiCfg.map.southWest = LatLng(5.2209, -4.2941);
+  trufiCfg.map.northEast = LatLng(5.6363, -3.7177);
 
   // Languages
   trufiCfg.languages.addAll([
@@ -123,9 +127,12 @@ void main() async {
 
   // Url
   trufiCfg.url.otpEndpoint = globalCfg.getString("urlOtpEndpoint");
-  trufiCfg.url.tilesStreetsEndpoint = globalCfg.getString("urlTilesStreetsEndpoint");
-  trufiCfg.url.tilesSatelliteEndpoint = globalCfg.getString("urlTilesSatelliteEndpoint");
-  trufiCfg.url.tilesTerrainEndpoint = globalCfg.getString("urlTilesTerrainEndpoint");
+  trufiCfg.url.tilesStreetsEndpoint =
+      globalCfg.getString("urlTilesStreetsEndpoint");
+  trufiCfg.url.tilesSatelliteEndpoint =
+      globalCfg.getString("urlTilesSatelliteEndpoint");
+  trufiCfg.url.tilesTerrainEndpoint =
+      globalCfg.getString("urlTilesTerrainEndpoint");
   trufiCfg.url.adsEndpoint = globalCfg.getString("urlAdsEndpoint");
   trufiCfg.url.routeFeedback = globalCfg.getString("urlRouteFeedback");
   trufiCfg.url.donate = globalCfg.getString("urlDonate");
@@ -134,7 +141,7 @@ void main() async {
   trufiCfg.url.twitter = globalCfg.getString("urlTwitter");
   trufiCfg.url.instagram = globalCfg.getString("urlInstagram");
   trufiCfg.url.share = globalCfg.getString("urlShare");
-
+  trufiCfg.map.mapTilerKey = globalCfg.getString("mapTilerKey");
   // Colors
   final theme = ThemeData(
     primaryColor: const Color(0xff263238),
@@ -144,7 +151,5 @@ void main() async {
   );
 
   // Run app
-  runApp(
-    TrufiApp(theme: theme)
-  );
+  runApp(TrufiApp(theme: theme));
 }
